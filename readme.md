@@ -1,7 +1,7 @@
 # Pembelajaran Tentang C++
-<a href="https://emptywork.netlify.app">
-  <img src="assets/active.svg" width=100>
-</a>
+
+<img src="./assets/cpp-teaching-header.jpg" alt="Pembelajaran tentang C++/CPlusPlus"/>
+
 
 Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang termuat pada repository ini antara lain:
 - <a href="src/1-pengenalan-awal-data-type.cpp">Pengenalan awal: Data-type [src/1-pengenalan-awal-data-type.cpp]</a>
@@ -13,6 +13,10 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
 
 **Didukung oleh:**
 <a href="https://filkom.ukim.ac.id">Filkom UKIM</a> | <a href="https://ukim.ac.id">UKIM</a>
+
+<a href="https://emptywork.netlify.app">
+  <img src="assets/active.svg" width=100>
+</a>
 
 ## Rekomendasi Code Editor
 
