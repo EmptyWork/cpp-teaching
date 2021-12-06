@@ -1,6 +1,6 @@
 /app
 .env*
-testing*
+/build
 
 .vs
 .vscode
