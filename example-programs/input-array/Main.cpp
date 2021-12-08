@@ -21,23 +21,33 @@ int main() {
 
   std::cout << '\n';
 
+  do {
   std::cout << "Ingin Menganti salah satu angka? [y/n] ";
   char res = input(res);
-  if(tolower(res) == 'y') {
-    std::cout << "Pilih nomor baris yang ingin di ganti: ";
-    int ganti = input();
-    std::cout << "Masukan angka baru: ";
-    int angkaBaru = input();
-    baris[ganti] = angkaBaru;
-
-    std::cout << "Array kamu sekarang: ";
-    for(int i = 0; i < length; i++) {
-      std::cout << baris[i];
-      if(i < length - 1) {
-        std::cout << ",";
+    if(tolower(res) == 'y') {
+      if(length == 0) {
+        std::cout << "Pilih nomor baris yang ingin di ganti [1]: ";
+      } else {
+        std::cout << "Pilih nomor baris yang ingin di ganti [1 - "<< length << "]: ";
       }
+      int ganti = input();
+      std::cout << "Masukan angka baru: ";
+      int angkaBaru = input();
+      baris[ganti - 1] = angkaBaru;
+
+      std::cout << "Array kamu sekarang: ";
+      for(int i = 0; i < length; i++) {
+        std::cout << baris[i];
+        if(i < length - 1) {
+          std::cout << ",";
+        } else {
+          std::cout << std::endl;
+        }
+      }
+    } else {
+      return 0;
     }
-  }
+  } while (1);
 
   return 0;
 

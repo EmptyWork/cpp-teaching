@@ -3,4 +3,4 @@
 
 int tampilanPertama(int, int);
 int input();
-char input(char );
+char input(char);
