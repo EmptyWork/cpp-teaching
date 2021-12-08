@@ -1,26 +1,23 @@
 # Pembelajaran Tentang C++
 
-<img src="./assets/cpp-teaching-header.jpg" alt="Pembelajaran tentang C++/CPlusPlus"/>
-
+![Pembelajaran tentang C++/CPlusPlus](/assets/cpp-teaching-header.jpg)
 
 Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang termuat pada repository ini antara lain:
-- <a href="src/1-pengenalan-awal-data-type.cpp">Pengenalan awal: Data-type [src/1-pengenalan-awal-data-type.cpp]</a>
-- <a href="src/2-pengenalan-fungsi.cpp">Pengenalan fungsi [src/2-pengenalan-fungsi.cpp]</a>
-- <a href="src/3-pengenalan-fungsi-void.cpp">Pengenalan fungsi [src/3-pengenalan-fungsi-void.cpp]</a>
+- [Tipe Data](src/data-types)
+- [Pengenalan Fungsi](src/functions/basic)
+- [Pengenalan Fungsi Void](src/functions/void)
 
 ## Daftar File dan File dengan Komen
 |File|Komen File|
 |---|---|
-|<a href="src/1-pengenalan-awal-data-type.cpp">src/1-pengenalan-awal-data-type.cpp</a>|<a href="src/comment/1b-pengenalan-awal-data-type.cpp">src/comment/1b-pengenalan-awal-data-type.cpp</a>|
-|<a href="src/2-pengenalan-fungsi.cpp">src/2-pengenalan-fungsi.cpp</a>|<a href="src/comment/2b-pengenalan-fungsi.cpp">src/comment/2b-pengenalan-fungsi.cpp</a>|
-|<a href="src/3-pengenalan-fungsi-void.cpp">src/3-pengenalan-fungsi-void.cpp</a>|<a href="src/comment/3b-pengenalan-fungsi-void.cpp">src/comment/3b-pengenalan-fungsi-void.cpp</a>|
+|[Tipe Data - Main](src/data-types/Main.cpp)|[Tipe Data - Comment](src/data-types/Comment.cpp)|
+|[Pengenalan Fungsi - Main](src/functions/basic/Main.cpp)|[Pengenalan Fungsi - Comment](src/functions/basic/Comment.cpp)|
+|[Pengenalan Fungsi Void - Main](src/functions/void/Main.cpp)|[Pengenalan Fungsi Void - Comment](src/functions/void/Comment.cpp)|
 
 **Didukung oleh:**
-<a href="https://filkom.ukim.ac.id">Filkom UKIM</a> | <a href="https://ukim.ac.id">UKIM</a>
+[Filkom UKIM](https://filkom.ukim.ac.id) | [UKIM](https://ukim.ac.id)
 
-<a href="https://emptywork.netlify.app">
-  <img src="assets/active.svg" width=100>
-</a>
+[![EmptyWork](/assets/active.svg)](https://emptywork.netlify.app)
 
 ## Rekomendasi Code Editor
 
