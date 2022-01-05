@@ -6,6 +6,7 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
 - [Tipe Data](src/data-types)
   - [Native](src/data-types/native)
   - [Struct](src/data-types/struct)
+  - [Enumeration](src/data-types/enum)
 - [Pengenalan Fungsi](src/functions)
   - [Biasa](src/functions/basic) 
   - [Void](src/functions/void)
@@ -15,6 +16,7 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
 |---|---|
 |[Tipe Data Native - Main](src/data-types/native/src/native.cpp)|[Tipe Data Native - Comment](src/data-types/native/native_comment.cpp)|
 |[Tipe Data Struct - Main](src/data-types/struct/src/struct.cpp)|[Tipe Data Struct - Comment](src/data-types/struct/struct_comment.cpp)|
+|[Tipe Data Enumeration - Main](src/data-types/enum/src/enum.cpp)|[Tipe Data Enumeration - Comment](src/data-types/enum/enum_comment.cpp)|
 |[Pengenalan Fungsi - Main](src/functions/basic/Main.cpp)|[Pengenalan Fungsi - Comment](src/functions/basic/Comment.cpp)|
 |[Pengenalan Fungsi Void - Main](src/functions/void/Main.cpp)|[Pengenalan Fungsi Void - Comment](src/functions/void/Comment.cpp)|
 
