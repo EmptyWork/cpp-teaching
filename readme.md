@@ -5,6 +5,7 @@
 Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang termuat pada repository ini antara lain:
 - [Tipe Data](src/data-types)
   - [Native](src/data-types/native)
+  - [Struct](src/data-types/struct)
 - [Pengenalan Fungsi](src/functions)
   - [Biasa](src/functions/basic) 
   - [Void](src/functions/void)
@@ -13,6 +14,7 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
 |File|Komen File|
 |---|---|
 |[Tipe Data Native - Main](src/data-types/native/src/native.cpp)|[Tipe Data Native - Comment](src/data-types/native/native_comment.cpp)|
+|[Tipe Data Struct - Main](src/data-types/struct/src/struct.cpp)|[Tipe Data Struct - Comment](src/data-types/struct/struct_comment.cpp)|
 |[Pengenalan Fungsi - Main](src/functions/basic/Main.cpp)|[Pengenalan Fungsi - Comment](src/functions/basic/Comment.cpp)|
 |[Pengenalan Fungsi Void - Main](src/functions/void/Main.cpp)|[Pengenalan Fungsi Void - Comment](src/functions/void/Comment.cpp)|
 
