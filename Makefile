@@ -1,22 +1,28 @@
-func-void:
-	@g++ -c src/functions/void/Main.cpp -I src/functions/void/lib -o main.o && g++ -c src/functions/void/Log.cpp -o log.o && g++ main.o log.o -o build/App && rm main.o log.o && clear && sleep 1 && ./build/App
+CPP = g++
+CPPFLAGS = -Wall
+RM = rm
 
-func-void-comment:
-	@g++ -c src/functions/void/Comment.cpp -I src/functions/void/lib -o comment.o && g++ -c src/functions/void/Log.cpp -o log.o && g++ comment.o log.o -o build/App -Wall && rm comment.o log.o && clear && sleep 1 && ./build/App
+func_void: main_void.o log_void.o
+	$(CPP) main.o log.o -o build/func_void $(CPPFLAGS)
 
-func-basic:
-	@g++ src/functions/basic/Main.cpp -o build/App -Wall && clear && sleep 1 && ./build/App
+main_void.o: src/functions/void/Main.cpp
+	$(CPP) -c src/functions/void/Main.cpp -I src/functions/void/lib -o main.o
 
-func-basic-comment:
-	@g++ src/functions/basic/Comment.cpp -o build/App -Wall && clear && sleep 1 && ./build/App
+log_void.o: src/functions/void/Log.cpp
+	$(CPP) -c src/functions/void/Log.cpp -o log.o
 
-ep-inparr:
-	@g++ -c example-programs/input-array/Main.cpp -I example-programs/input-array/lib -o main.o && g++ -c example-programs/input-array/Program.cpp -o program.o && g++ main.o program.o -o build/App -Wall && rm main.o program.o && clear && sleep 1 && ./build/App
+func_basic: 
+	$(CPP) src/functions/basic/Main.cpp -o build/func_basic $(CPPFLAGS)
 
-edit:
-	@echo "EmptyWork's C++ Testing Process"
-	@g++ src/random/edit.cpp -o build/test -Wall && clear && ./build/test
+clean:
+	$(RM) build/*
+	$(RM) *.o
 
-edit2:
-	@echo "EmptyWork's C++ Testing Process"
-	@g++ src/random/edit2.cpp -o build/test -Wall && clear && ./build/test
+ep_inparr: main_ep_inparr.o program_ep_inparr.o
+	$(CPP) main.o program.o -o build/ep_inparr $(CPPFLAGS)
+
+main_ep_inparr.o: example-programs/input-array/Main.cpp
+	$(CPP) -c example-programs/input-array/Main.cpp -I example-programs/input-array/lib -o main.o
+
+program_ep_inparr.o: example-programs/input-array/Program.cpp
+	$(CPP) -c example-programs/input-array/Program.cpp -o program.o
