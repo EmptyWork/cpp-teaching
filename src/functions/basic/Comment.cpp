@@ -2,9 +2,8 @@
 /* 
   Menginisialisasi sebuah fungsi dengan nama tambah
   yang memiliki 2 parameter
-  @param a - Int
-  @param b - Int
-  dan akan mengembalikan
+  @param {a} Int
+  @param {b} Int
   @return a + b - Int
 */
 int tambah(int a, int b) {
