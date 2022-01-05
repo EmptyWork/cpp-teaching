@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Program.h"
+#include "input_array_program.h"
 
 int main() {
   std::cout << "Selamat Datang ke Aplikasi Pembuat Array" << std::endl;

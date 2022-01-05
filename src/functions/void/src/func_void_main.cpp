@@ -1,4 +1,4 @@
-#include "Log.h"
+#include "func_void_log.h"
 
 int main() {
   tampilkanInfo("Hello World");
