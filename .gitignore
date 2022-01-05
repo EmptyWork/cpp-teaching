@@ -1,8 +1,8 @@
 /app
 .env*
-/build/*
+**/build/
+**/obj/
 
-/src/random
+**/random
 .vs
 .vscode
-edit.cpp
