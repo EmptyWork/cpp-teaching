@@ -1,13 +1,12 @@
 #include "func_void_log.h"
 
-/*
-  Fungsi yang bertipe void tidak bisa
-  mengembalikan data, maka keywords
-  return tidak bisa di tambahkan,
-  jika di dalam fungsi void terdapat
-  return maka tidak bisa di compile
-*/
-
+/**
+ * @brief Fungsi yang bertipe void
+ * tidak bisa mengembalikan data, maka
+ * keyword return tidak bisa ditambahkan,
+ * jika didalam fungsi void terdapat
+ * return maka tidak bisa di compile
+ */
 int main() {
   tampilkanInfo("Hello World");
   tampilkanInfo('\n');
