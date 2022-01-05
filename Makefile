@@ -40,7 +40,7 @@ dt_enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
 	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/enum.cpp -o $(BUILD)/enum
 
 dt_class: $(BUILD) $(DTDIR)/class/src/class.cpp
-	$(CPP) $(CPPFLAGS) $(DTDIR)/class/src/class.cpp -o $(BUILD)/class
+	$(CD) $(DTDIR)/class/ && make && $(BUILD)/main
 
 $(EP): $(EPS)
 
