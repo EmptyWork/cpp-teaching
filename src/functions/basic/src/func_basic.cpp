@@ -22,6 +22,7 @@ const char* benarsalah(int a) {
 }
 
 int main() {
+  std::cout << "CPP Teaching Copyright (C) 2021  EmptyWork" << NL;
   std::cout << "Contoh pembuatan Fungsi: " << NL;
   std::cout << "Hasil dari 4 + 6: " << tambah(4, 6) << NL;
   std::cout << "Apakah -1 kurang dari 2: " << benarsalah(kurangdari2(-1)) << NL; 

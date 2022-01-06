@@ -13,6 +13,8 @@ enum Jawab : bool {
 };
 
 int main() {
+  std::cout << "CPP Teaching Copyright (C) 2021  EmptyWork" << NL;
+
   Jawab ulang;
   Status pembayaran_pertama;
 

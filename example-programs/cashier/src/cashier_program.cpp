@@ -5,6 +5,7 @@
 void Program::idProgram(){
   horizontalLine();
 
+  std::cout << "CPP Teaching - Cashier | Copyright (C) 2022  EmptyWork" << NL;
   std::cout << std::setw(40) << "Cashier" << NL;
   
   horizontalLine();

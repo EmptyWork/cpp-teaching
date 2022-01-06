@@ -12,6 +12,8 @@ typedef struct
 
 
 int main() {
+  std::cout << "CPP Teaching Copyright (C) 2021  EmptyWork" << std::endl;
+  
   hewan ikan;
   ikan.nama = "Ikan Emas";
   ikan.umur = 17;

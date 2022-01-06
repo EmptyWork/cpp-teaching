@@ -2,6 +2,8 @@
 #include "input_array_program.h"
 
 int main() {
+
+  std::cout << "CPP Teaching - Array | Copyright (C) 2021  EmptyWork" << std::endl;
   std::cout << "Selamat Datang ke Aplikasi Pembuat Array" << std::endl;
   std::cout << "Masukan Panjang Baris: ";
   int length = input();

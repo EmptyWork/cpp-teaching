@@ -52,6 +52,7 @@ class Manusia {
 
 int main() {
   using namespace std;
+  cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << NL;
   Manusia jason(MENINGGAL);
  
   jason.aturNama("Jason Aldo Amluina");
