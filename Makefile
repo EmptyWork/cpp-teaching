@@ -23,7 +23,7 @@ all: $(DT) $(FUNC) $(EP)
 $(FUNC): $(FUNCS)
 
 func_void:
-	$(CD) $(FUNCDIR)/void && make && $(BUILD)/main
+	$(CD) $(FUNCDIR)/void && make 
 
 func_basic: $(BUILD) $(FUNCDIR)/basic/src/func_basic.cpp
 	$(CPP) $(CPPFLAGS) $(FUNCDIR)/basic/src/func_basic.cpp -o $(BUILD)/func_basic
@@ -31,7 +31,7 @@ func_basic: $(BUILD) $(FUNCDIR)/basic/src/func_basic.cpp
 $(DT): $(DTS)
 
 dt_native:
-	$(CD) $(DTDIR)/native && make && $(BUILD)/main
+	$(CD) $(DTDIR)/native && make 
 
 dt_struct: $(BUILD) $(DTDIR)/struct/src/struct.cpp
 	$(CPP) $(CPPFLAGS) $(DTDIR)/struct/src/struct.cpp -o $(BUILD)/struct
@@ -40,7 +40,7 @@ dt_enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
 	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/enum.cpp -o $(BUILD)/enum
 
 dt_class: $(BUILD) $(DTDIR)/class/src/class.cpp
-	$(CD) $(DTDIR)/class/ && make && $(BUILD)/main
+	$(CD) $(DTDIR)/class/ && make 
 
 $(EP): $(EPS)
 
@@ -48,7 +48,7 @@ ep_inparr:
 	$(CD) example-programs/input-array/ && make
 
 ep_cashier:
-	$(CD) example-programs/cashier/ && make && $(BUILD)/main
+	$(CD) example-programs/cashier/ && make 
 
 clean:
 	./clean.sh
