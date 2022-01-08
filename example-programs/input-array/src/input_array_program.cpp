@@ -1,6 +1,6 @@
 #include <iostream>
 
-int tampilanPertama(int a, int b) {
+int tampilanpertama(int a, int b) {
   return a + b;
 }
 
@@ -14,4 +14,8 @@ char input(char a) {
   char input;
   std::cin >> input;
   return input;
+}
+
+void barisbaru() {
+  std::cout << '\n';
 }

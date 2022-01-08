@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
-int tampilanPertama(int, int);
+int tampilanpertama(int, int);
 int input();
 char input(char);
+void barisbaru();
