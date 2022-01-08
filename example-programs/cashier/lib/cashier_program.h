@@ -1,16 +1,15 @@
 #pragma once
 
-#define NL '\n'
-
+#define RP "Rp. "
 class Program {
   private:
     std::string cashierName;
     int totalItem;
 
-
   public:
     Program();
-    void idProgram();
+    void idProgram(bool);
+    void logoEmptyWork();
     void setName();
     void setTotalItem();
     void setItemInfo(int*, int*, std::string*);
@@ -19,4 +18,4 @@ class Program {
     int getTotalItem();
 };
 
-void horizontalLine();
+void horizontalLine(bool, bool);

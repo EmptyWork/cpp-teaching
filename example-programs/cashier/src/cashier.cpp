@@ -4,10 +4,11 @@
 int main() {
   Program cashier;
 
-  cashier.idProgram();
   cashier.setName();
-  
-  std::cout << "Name: " << cashier.getName();
+
+  std::cout << "Name: " << cashier.getName() << std::endl;
+  cashier.setTotalItem();
+
 
   int itemPrice[cashier.getTotalItem()], itemDiscount[cashier.getTotalItem()];
   std::string itemName[cashier.getTotalItem()];

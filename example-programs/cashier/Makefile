@@ -12,7 +12,7 @@ LIB=lib
 SRCS=$(wildcard $(SRC)/*.cpp)
 OBJS=$(patsubst $(SRC)/%.cpp, $(OBJ)/%.o, $(SRCS))
 
-all:$(BUILD)
+all: $(BUILD)
 
 $(BUILD): $(OBJ) $(BUILDDIR) $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $@
