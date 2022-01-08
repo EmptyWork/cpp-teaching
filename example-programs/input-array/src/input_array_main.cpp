@@ -21,7 +21,7 @@ int main() {
     }
   }
 
-  std::cout << '\n';
+  newline();
 
   do {
   std::cout << "Ingin Menganti salah satu angka? [y/n] ";
