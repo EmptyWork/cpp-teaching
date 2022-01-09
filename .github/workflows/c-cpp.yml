@@ -14,5 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: make
+    - name: Make the Entire Apps
       run: make
+    
+    - name: Clean
+      run: make clean
