@@ -8,11 +8,11 @@ on:
 
 jobs:
   build:
-
+    name: Buat CPP Teaching
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: make
+    - name: Buat semua aplikasi
       run: make
