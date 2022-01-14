@@ -53,6 +53,9 @@ ep_inparr:
 ep_cashier:
 	$(CD) example-programs/cashier/ && make 
 
+ep_cashier-vector:
+	$(CD) example-programs/cashier-vector/ && make && ./build/main
+
 clean:
 	./clean.sh
 
