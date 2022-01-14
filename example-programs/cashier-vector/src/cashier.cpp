@@ -11,9 +11,7 @@ int main() {
   cashier.setTotalItem();
 
   std::vector<std::string> itemName;
-  std::vector<int> itemPrice, itemDiscount;
-  // int itemPrice[cashier.getTotalItem()], itemDiscount[cashier.getTotalItem()];
-  // std::string itemName[cashier.getTotalItem()];
+  std::vector<int> itemPrice, itemDiscount;;
 
   cashier.setItemInfo(itemPrice, itemDiscount, itemName);
   cashier.showItemInfo(itemPrice, itemDiscount, itemName);
