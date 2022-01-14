@@ -21,19 +21,19 @@ class Manusia {
       status = _status;
     }
 
-    void aturNama(std::string _name){
+    void aturnama(std::string _name){
       (status == MENINGGAL) ? name = meninggal + _name : name = _name;
     }
 
-    void aturUmur(int _age) {
+    void aturumur(int _age) {
       age = _age;
     }
 
-    void aturJenisKelamin(char _gender) {
+    void aturjeniskelamin(char _gender) {
       gender = _gender;
     }
 
-    std::string ambilNama() {
+    std::string ambilnama() {
       return  name;
     }
 
@@ -41,7 +41,7 @@ class Manusia {
       return age;
     }
 
-    char ambilJenisKelamin() {
+    char ambiljeniskelamin() {
       return gender;
     }
 
@@ -55,12 +55,12 @@ int main() {
   cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << NL;
   Manusia jason(MENINGGAL);
  
-  jason.aturNama("Jason Aldo Amluina");
-  jason.aturUmur(23);
-  jason.aturJenisKelamin('P');
+  jason.aturnama("Jason Aldo Amluina");
+  jason.aturumur(23);
+  jason.aturjeniskelamin('P');
 
-  cout << "Nama\t\t\t: " << jason.ambilNama() << NL;
+  cout << "Nama\t\t\t: " << jason.ambilnama() << NL;
   cout << "Umur\t\t\t: " << jason.ambilUmur() << NL;
-  cout << "Jenis Kelamin (P/W)\t: " << jason.ambilJenisKelamin() << NL;
+  cout << "Jenis Kelamin (P/W)\t: " << jason.ambiljeniskelamin() << NL;
 
 }
