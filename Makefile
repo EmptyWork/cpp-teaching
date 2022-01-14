@@ -42,6 +42,9 @@ dt_enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
 dt_class: $(BUILD) $(DTDIR)/class/src/class.cpp
 	$(CD) $(DTDIR)/class/ && make 
 
+dt_array: $(BUILD) $(DTDIR)/array/src/array.cpp
+	$(CD) $(DTDIR)/array/ && make && ./build/main
+
 $(EP): $(EPS)
 
 ep_inparr:
