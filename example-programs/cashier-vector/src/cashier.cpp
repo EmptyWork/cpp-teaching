@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "cashier_program.h"
+#include "../lib/cashier_program-vector.h"
 
 int main() {
   Program cashier;
@@ -13,6 +13,15 @@ int main() {
   std::vector<std::string> itemName;
   std::vector<int> itemPrice, itemDiscount;;
 
-  cashier.setItemInfo(itemPrice, itemDiscount, itemName);
-  cashier.showItemInfo(itemPrice, itemDiscount, itemName);
+  cashier.setItemInfo(
+    itemPrice, 
+    itemDiscount, 
+    itemName
+    );
+    
+  cashier.showItemInfo(
+    itemPrice, 
+    itemDiscount, 
+    itemName
+    );
 }
