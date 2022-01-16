@@ -5,15 +5,15 @@
 int main() {
   Program cashier;
 
-  cashier.setName();
+  cashier.aturnama();
 
-  std::cout << "Name: " << cashier.getName() << std::endl;
-  cashier.setTotalItem();
+  std::cout << "Nama: " << cashier.ambilnama() << std::endl;
+  cashier.aturtotalbarang();
 
   std::vector<std::string> itemName;
   std::vector<int> itemPrice, itemDiscount;;
 
-  cashier.setItemInfo(
+  cashier.aturrincianbarang(
     itemPrice, 
     itemDiscount, 
     itemName

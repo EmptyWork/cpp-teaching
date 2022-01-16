@@ -3,48 +3,48 @@
 #include <vector>
 #include "../lib/cashier_program-vector.h"
 
-void Program::idProgram(bool start){
+void Program::idprogram(bool start){
   std::cout << "CPP Teaching - Cashier \nCopyright (C) 2022  EmptyWork \nsite: <https://emptywork.netlify.app>" << std::endl;
-  if(start) logoEmptyWork();
+  if(start) logoemptyWork();
 }
 
-void Program::logoEmptyWork(){
+void Program::logoemptyWork(){
     std::cout << "                                        \n                                        \n                      ,,.               \n                   ,lxNNk;              \n                  .,lkNMMNk;            \n        .',,.   ;d;   :O0kkOx;          \n        :XWWk',kNNc .'dKk;.:XNx'        \n        cNMMO:kMMWkx0XMMMNxdXMNc        \n        cNMMOcOMMMMMMMWWMMMOlkKc        \n        cNMMOcOMMMMWN0lkWMMx..,.        \n        cNMNOONMMM0c'. oWMMx.           \n        cXO::0MMMNc    oWMNl            \n        c0l.'0MWXo.    oXk;             \n        cNNklokd'      ',               \n        cNMMk'.                         \n        cNXd'                           \n        ,l'                             \n                                        \n                                        \n                                        \n";
 }
 
 Program::Program() {
-  idProgram(true);
+  idprogram(true);
 }
 
-std::string Program::getName(){
-  return cashierName;
+std::string Program::ambilnama(){
+  return namapetugas;
 }
 
-void Program::setName(){
+void Program::aturnama(){
   std::cin.clear();
   std::cout << "Masukan nama kalian: ";
-  std::getline(std::cin, cashierName);
+  std::getline(std::cin, namapetugas);
 }
 
-void Program::setTotalItem() {
+void Program::aturtotalbarang() {
   std::cout << "Masukan Jumlah Item: ";
-  std::cin >> totalItem;
+  std::cin >> totalbarang;
 }
 
-int Program::getTotalItem() {
-  return totalItem;
+int Program::ambiltotalbarang() {
+  return totalbarang;
 }
 
-void Program::setItemInfo(
-  std::vector<int> itemPrice, 
-  std::vector<int> itemDiscount, 
-  std::vector<std::string> itemName
+void Program::aturrincianbarang(
+  std::vector<int>& hargabarang, 
+  std::vector<int>& diskonbarang, 
+  std::vector<std::string>& namabarang
   ){
   
-  std::string tempName;
-  int tempPrice, tempDiscount;
+  std::string namasementara;
+  int hargasementara, diskonsementara;
 
-  for (int i = 0; i < totalItem; i++)
+  for (int i = 0; i < totalbarang; i++)
   {
     horizontalLine(true, true);
 
@@ -53,30 +53,28 @@ void Program::setItemInfo(
     horizontalLine(false, false);
     
     std::cout << "Masukan nama item: ";
-    std::cin >> tempName;
-    itemName.push_back(tempName);
+    std::cin >> namasementara;
+    namabarang.push_back(namasementara);
     
     std::cout << "Harga item: ";
-    std::cin >> tempPrice;
-    itemPrice.push_back(tempPrice);
+    std::cin >> hargasementara;
+    hargabarang.push_back(hargasementara);
 
     std::cout << "Item Discount: ";
-    std::cin >> tempDiscount;
-    itemDiscount.push_back(tempDiscount);
+    std::cin >> diskonsementara;
+    diskonbarang.push_back(diskonsementara);
 
     horizontalLine(true, true);
   }
 }
 
-
-// TODO: fix the buggy item not showing up
 void Program::showItemInfo(
-  std::vector<int> itemPrice, 
-  std::vector<int> itemDiscount, 
-  std::vector<std::string> itemName
+  std::vector<int>& hargabarang, 
+  std::vector<int>& diskonbarang, 
+  std::vector<std::string>& namabarang
   ) {
   
-  idProgram(false);
+  idprogram(false);
   
   std::cout << std::setw(2) << "NO";
   std::cout << std::setw(20) << "Nama";
@@ -85,25 +83,22 @@ void Program::showItemInfo(
   std::cout << std::setw(15) << "Total" << std::endl;
 
   for (
-    int i = 0; 
-    i < itemName.size(); 
+    unsigned int i = 0; 
+    i < namabarang.size(); 
     i++)
   {
     std::cout << std::setw(2) << i+1;
-    std::cout << std::setw(20) << itemName.at(i);
+    std::cout << std::setw(20) << namabarang.at(i);
     
-    // TODO: need to fix the spacing result on two '<<'
-    std::cout << std::setw(24) << std::setiosflags(std::ios_base::right) << RP << itemPrice.at(i);
+    std::cout << std::setiosflags(std::ios_base::right) << std::setw(2) << RP << std::setw(22) << hargabarang.at(i);
     
-    // TODO: need to fix the spacing result on two '<<'
-    std::cout << std::setw(6) << itemDiscount.at(i) << "%";
+    std::cout << std::setw(5) << diskonbarang.at(i) << std::setw(1) << "%";
 
-    int discountAmout = itemPrice.at(i) * itemDiscount.at(i) / 100;
-    if(discountAmout < 0) discountAmout = 0;
-    int needToPay = itemPrice.at(i) - discountAmout;
+    int jumlahdiskon = hargabarang.at(i) * diskonbarang.at(i) / 100;
+    if(jumlahdiskon < 0) jumlahdiskon = 0;
+    int harusdibayar = hargabarang.at(i) - jumlahdiskon;
 
-    // TODO: need to fix the spacing result on two '<<'
-    std::cout << std::setw(15) << RP << needToPay << std::endl;
+    std::cout << std::setw(15) << RP << harusdibayar << std::endl;
   }
 }
 

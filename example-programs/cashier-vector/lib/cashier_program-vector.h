@@ -6,19 +6,19 @@
 #define RP "Rp. "
 class Program {
   private:
-    std::string cashierName;
-    int totalItem;
+    std::string namapetugas;
+    int totalbarang;
 
   public:
     Program();
-    void idProgram(bool);
-    void logoEmptyWork();
-    void setName();
-    void setTotalItem();
-    void setItemInfo(std::vector<int>, std::vector<int>, std::vector<std::string>);
-    void showItemInfo(std::vector<int>, std::vector<int>, std::vector<std::string>);
-    std::string getName();
-    int getTotalItem();
+    void idprogram(bool);
+    void logoemptyWork();
+    void aturnama();
+    void aturtotalbarang();
+    void aturrincianbarang(std::vector<int>&, std::vector<int>&, std::vector<std::string>&);
+    void showItemInfo(std::vector<int>&, std::vector<int>&, std::vector<std::string>&);
+    std::string ambilnama();
+    int ambiltotalbarang();
 };
 
 void horizontalLine(bool, bool);
