@@ -4,15 +4,15 @@
 int main() {
   Program cashier;
 
-  cashier.setName();
+  cashier.aturnama();
 
-  std::cout << "Name: " << cashier.getName() << std::endl;
-  cashier.setTotalItem();
+  std::cout << "Nama: " << cashier.ambilnama() << std::endl;
+  cashier.aturtotalbarang();
 
 
-  int itemPrice[cashier.getTotalItem()], itemDiscount[cashier.getTotalItem()];
-  std::string itemName[cashier.getTotalItem()];
+  int hargabarang[cashier.ambiltotalbarang()], diskonbarang[cashier.ambiltotalbarang()];
+  std::string namabarang[cashier.ambiltotalbarang()];
 
-  cashier.setItemInfo(itemPrice, itemDiscount, itemName);
-  cashier.showItemInfo(itemPrice, itemDiscount, itemName);
+  cashier.setItemInfo(hargabarang, diskonbarang, namabarang);
+  cashier.showItemInfo(hargabarang, diskonbarang, namabarang);
 }

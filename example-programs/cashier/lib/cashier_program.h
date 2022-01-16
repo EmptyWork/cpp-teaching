@@ -3,19 +3,19 @@
 #define RP "Rp. "
 class Program {
   private:
-    std::string cashierName;
-    int totalItem;
+    std::string namapetugas;
+    int totalbarang;
 
   public:
     Program();
-    void idProgram(bool);
-    void logoEmptyWork();
-    void setName();
-    void setTotalItem();
+    void idprogram(bool);
+    void logoemptyWork();
+    void aturnama();
+    void aturtotalbarang();
     void setItemInfo(int*, int*, std::string*);
     void showItemInfo(int*, int*, std::string*);
-    std::string getName();
-    int getTotalItem();
+    std::string ambilnama();
+    int ambiltotalbarang();
 };
 
 void horizontalLine(bool, bool);
