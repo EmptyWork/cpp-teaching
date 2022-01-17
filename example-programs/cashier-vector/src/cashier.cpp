@@ -10,18 +10,18 @@ int main() {
   std::cout << "Nama: " << cashier.ambilnama() << std::endl;
   cashier.aturtotalbarang();
 
-  std::vector<std::string> itemName;
-  std::vector<int> itemPrice, itemDiscount;;
+  std::vector<std::string> namabarang;
+  std::vector<int> hargabarang, diskonbarang;;
 
   cashier.aturrincianbarang(
-    itemPrice, 
-    itemDiscount, 
-    itemName
+    hargabarang, 
+    diskonbarang, 
+    namabarang
     );
     
   cashier.showItemInfo(
-    itemPrice, 
-    itemDiscount, 
-    itemName
+    hargabarang, 
+    diskonbarang, 
+    namabarang
     );
 }
