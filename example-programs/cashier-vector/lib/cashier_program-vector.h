@@ -15,8 +15,18 @@ class Program {
     void logoemptyWork();
     void aturnama();
     void aturtotalbarang();
-    void aturrincianbarang(std::vector<int>&, std::vector<int>&, std::vector<std::string>&);
-    void showItemInfo(std::vector<int>&, std::vector<int>&, std::vector<std::string>&);
+    void aturrincianbarang
+    (
+      std::vector<int>&, 
+      std::vector<int>&, 
+      std::vector<std::string>&
+    );
+    void showItemInfo
+    (
+      std::vector<int>&, 
+      std::vector<int>&, 
+      std::vector<std::string>&
+    );
     std::string ambilnama();
     int ambiltotalbarang();
 };

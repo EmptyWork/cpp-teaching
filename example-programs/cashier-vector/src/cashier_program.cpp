@@ -72,7 +72,7 @@ void Program::showItemInfo(
   std::vector<int>& hargabarang, 
   std::vector<int>& diskonbarang, 
   std::vector<std::string>& namabarang
-  ) {
+) {
   
   idprogram(false);
   
@@ -105,7 +105,7 @@ void Program::showItemInfo(
 void horizontalLine(
   bool type, 
   bool endline
-  ) {
+) {
   if(type) std::cout << "========================================" << std::endl;
   else std::cout << "----------------------------------------" << std::endl;
   if(endline) std::cout << std::endl;
