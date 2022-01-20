@@ -10,7 +10,7 @@ RMFLAGS=-r
 RM=rm $(RMFLAGS)
 
 EPS=ep_inparr ep_cashier
-FUNCS=func_void func_basic
+FUNCS=func_void func_basic func_inline
 DTS=dt_native dt_native dt_enum dt_class
 
 EP=ep
@@ -26,7 +26,10 @@ func_void:
 	$(CD) $(FUNCDIR)/void && make 
 
 func_basic: $(BUILD) $(FUNCDIR)/basic/src/func_basic.cpp
-	$(CPP) $(CPPFLAGS) $(FUNCDIR)/basic/src/func_basic.cpp -o $(BUILD)/func_basic
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/basic/src/$@.cpp -o $(BUILD)/$@
+
+func_inline: $(BUILD) $(FUNCDIR)/inline/src/func_inline.cpp
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/inline/src/$@.cpp -o $(BUILD)/$@
 
 $(DT): $(DTS)
 
