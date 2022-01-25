@@ -2,20 +2,39 @@
 
 namespace foo 
 {
+
   int five = 5;
+
   float sixpointseven = 6.7f;
 
-  namespace bar {
+  namespace bar 
+  {
+
     int five = 5;
+
     float sixpointseven = 6.7f;
+
   }
 
-  void show() {
+  void show() 
+  {
+
     std::cout << "This is a function";
+
   }
 }
 
-int main() {
+namespace 
+{
+
+  int yes = 70;
+
+}
+
+int main() 
+{
+
+  std::cout << ::yes << std::endl;
 
   std::cout << foo::five << std::endl;
 
