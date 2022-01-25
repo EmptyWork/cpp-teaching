@@ -38,3 +38,5 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
 **CPPReference**: https://en.cppreference.com/w/
 
 **CPlusPlus**: https://www.cplusplus.com/
+
+**Namespace-CPPReference**: https://en.cppreference.com/w/cpp/language/namespace
