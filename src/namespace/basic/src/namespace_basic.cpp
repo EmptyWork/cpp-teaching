@@ -24,6 +24,12 @@ int main() {
   std::cout << foo::sixpointseven << std::endl;
   
   std::cout << foo::bar::sixpointseven << std::endl;
+
+  namespace foobar = foo::bar;
+  
+  std::cout << foobar::five << std::endl;
+  
+  std::cout << foobar::sixpointseven << std::endl;
   
   foo::show();
 
