@@ -1,3 +1,5 @@
+# TODO: UBAH STRUKTUR FILE INI
+
 CPP=g++
 CPPFLAGS=-Wall
 BUILD=build
@@ -37,10 +39,10 @@ dt_native:
 	$(CD) $(DTDIR)/native && make 
 
 dt_struct: $(BUILD) $(DTDIR)/struct/src/struct.cpp
-	$(CPP) $(CPPFLAGS) $(DTDIR)/struct/src/struct.cpp -o $(BUILD)/struct
+	$(CPP) $(CPPFLAGS) $(DTDIR)/struct/src/$@.cpp -o $(BUILD)/$@
 
 dt_enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
-	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/enum.cpp -o $(BUILD)/enum
+	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/$@.cpp -o $(BUILD)/$@
 
 dt_class: $(BUILD) $(DTDIR)/class/src/class.cpp
 	$(CD) $(DTDIR)/class/ && make 
