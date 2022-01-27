@@ -1,6 +1,6 @@
 # Pembelajaran Tentang C++
 
-![Pembelajaran tentang C++/CPlusPlus](/assets/cpp-teaching-header.jpg)
+![Pembelajaran tentang C++/CPlusPlus](/assets/cpp-teaching-readme.png)
 
 Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang termuat pada repository ini antara lain:
 - [Tipe Data](src/data-types)
