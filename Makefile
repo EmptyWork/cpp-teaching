@@ -4,6 +4,7 @@ CPP=g++
 CPPFLAGS=-Wall
 BUILD=build
 SRC=src
+MAINDIR=$(SRC)/main
 FUNCDIR=$(SRC)/functions
 DTDIR=$(SRC)/data-types
 
@@ -14,6 +15,7 @@ RM=rm $(RMFLAGS)
 EPS=ep_inparr ep_cashier
 FUNCS=func_void func_basic func_inline
 DTS=dt_native dt_native dt_enum dt_class
+MAINS=argc argv envp
 
 EP=ep
 FUNC=func
@@ -23,6 +25,15 @@ DT=dt
 all: $(DT) $(FUNC) $(EP)
 
 $(FUNC): $(FUNCS)
+
+argc: $(BUILD) $(MAINDIR)/argc/src/argc.cpp
+	$(CPP) $(CPPFLAGS) $(MAINDIR)/argc/src/argc.cpp -o $(BUILD)/argc
+
+argv: $(BUILD) $(MAINDIR)/argv/src/argv.cpp
+	$(CPP) $(CPPFLAGS) $(MAINDIR)/argv/src/argv.cpp -o $(BUILD)/argv
+
+envp: $(BUILD) $(MAINDIR)/envp/src/envp.cpp
+	$(CPP) $(CPPFLAGS) $(MAINDIR)/envp/src/envp.cpp -o $(BUILD)/envp
 
 func_void:
 	$(CD) $(FUNCDIR)/void && make 
