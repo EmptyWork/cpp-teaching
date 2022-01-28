@@ -12,7 +12,7 @@ int main(int argc, char *argv[],char *envp[]) {
     std::cout << i+1 << ". " << argv[i] << std::endl;
   }
   
-  std::cout << "\nPanjang pengaturan lingkungan yang ada adalah: " << argc << std::endl;
+  std::cout << "\nPanjang pengaturan lingkungan yang ada adalah: " << sizeof(envp) << std::endl;
 
   std::cout << "Sedangkan detail pengaturan lingkungan adalah: " << std::endl;
 
