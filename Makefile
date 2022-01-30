@@ -1,30 +1,51 @@
 # TODO: UBAH STRUKTUR FILE INI
 
+# =====
+# pengaturan untuk compiler - g++
+# =====
+
 CPP=g++
 CPPFLAGS=-Wall
-BUILD=build
-SRC=src
-MAINDIR=$(SRC)/main
-FUNCDIR=$(SRC)/functions
-DTDIR=$(SRC)/data-types
+
+# =====
+# perintah untuk os
+# =====
 
 CD=cd
 RMFLAGS=-r
 RM=rm $(RMFLAGS)
+
+# =====
+# daftar direktori
+# =====
+
+SRC=src
+BUILD=build
+MAINDIR=$(SRC)/main
+FUNCDIR=$(SRC)/functions
+DTDIR=$(SRC)/data-types
+
+# =====
+# daftar aplikasi dan name `make` 
+# =====
 
 EPS=ep_inparr ep_cashier
 FUNCS=func_void func_basic func_inline
 DTS=dt_native dt_native dt_enum dt_class
 MAINS=argc argv envp
 
+# =====
+# koleksi aplikasi
+# =====
+
 EP=ep
 FUNC=func
 DT=dt
+MA=ma
 
+all: $(DT) $(FUNC) $(EP) $(MA)
 
-all: $(DT) $(FUNC) $(EP)
-
-$(FUNC): $(FUNCS)
+$(MA): $(MAINS)
 
 argc: $(BUILD) $(MAINDIR)/argc/src/argc.cpp
 	$(CPP) $(CPPFLAGS) $(MAINDIR)/argc/src/argc.cpp -o $(BUILD)/argc
@@ -34,6 +55,8 @@ argv: $(BUILD) $(MAINDIR)/argv/src/argv.cpp
 
 envp: $(BUILD) $(MAINDIR)/envp/src/envp.cpp
 	$(CPP) $(CPPFLAGS) $(MAINDIR)/envp/src/envp.cpp -o $(BUILD)/envp
+
+$(FUNC): $(FUNCS)
 
 func_void:
 	$(CD) $(FUNCDIR)/void && make 
