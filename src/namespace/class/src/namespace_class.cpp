@@ -5,6 +5,29 @@ enum Status {
   MENINGGAL
 };
 
+namespace Bentuk {
+  class Lingkaran {
+    private:
+      int diameter;
+      float phi;
+
+    public:
+      Lingkaran(int _diameter) {
+        std::cout << "(obj) Lingkaran dibuat" << std::endl;
+        diameter = _diameter;
+        phi = 3.14;
+      }
+
+      int luas() {
+        return phi * diameter * diameter;
+      }
+
+      ~Lingkaran() {
+        std::cout << "(obj) Lingkaran dihapus" << std::endl;
+      }
+  };
+};
+
 namespace {
 
   class Manusia {
@@ -35,7 +58,7 @@ namespace {
       }
 
       std::string ambilnama() {
-        return  name;
+        return name;
       }
 
       int ambilumur() {
@@ -46,7 +69,7 @@ namespace {
         return gender;
       }
 
-      ~anusiaM() {
+      ~Manusia() {
         std::cout << "(obj) manusia dihapus" << std::endl;
       }
   };
@@ -55,16 +78,19 @@ namespace {
 int main() {
   using namespace std;
   
-  cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << std::endl;
+  cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << endl;
   
   ::Manusia jason(MENINGGAL);
+
  
   jason.aturnama("Jason Aldo Amluina");
   jason.aturumur(23);
   jason.aturjeniskelamin('P');
 
-  cout << "Nama\t\t\t: " << jason.ambilnama() << std::endl;
-  cout << "Umur\t\t\t: " << jason.ambilumur() << std::endl;
-  cout << "Jenis Kelamin (P/W)\t: " << jason.ambiljeniskelamin() << std::endl;
-
+  cout << "Nama\t\t\t: " << jason.ambilnama() << endl;
+  cout << "Umur\t\t\t: " << jason.ambilumur() << endl;
+  cout << "Jenis Kelamin (P/W)\t: " << jason.ambiljeniskelamin() << endl;
+ 
+  Bentuk::Lingkaran bangunpertama(2);
+  cout << "Luas lingkaran yaitu: " << bangunpertama.luas() << endl;
 }
