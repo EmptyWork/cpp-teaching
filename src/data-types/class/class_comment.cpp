@@ -52,7 +52,7 @@ class Manusia {
       return  name;
     }
 
-    int ambilUmur() {
+    int ambilumur() {
       return age;
     }
 
@@ -74,7 +74,7 @@ int main() {
   jason.aturjeniskelamin('P');
 
   cout << "Nama\t\t\t: " << jason.ambilnama() << NL;
-  cout << "Umur\t\t\t: " << jason.ambilUmur() << NL;
+  cout << "Umur\t\t\t: " << jason.ambilumur() << NL;
   cout << "Jenis Kelamin (P/W)\t: " << jason.ambiljeniskelamin() << NL;
 
 }
