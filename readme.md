@@ -15,6 +15,10 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
   - [Inline](src/functions/inline)
 - [Pengenalan Namespace](src/namespace)
   - [Biasa](src/namespace/basic)
+- [Pengenalan Parameter Fungsi Utama](src/main)
+  - [Argc](src/main/argc)
+  - [Argv](src/main/argv)
+  - [Envp](src/main/envp)
 
 ## Didukung oleh
 
