@@ -13,6 +13,7 @@ Source code untuk dasar-dasar tentang bahasa pemrograman C++. Adapun materi yang
   - [Biasa](src/functions/basic) 
   - [Void](src/functions/void)
   - [Inline](src/functions/inline)
+  - [Auto](src/functions/auto)
 - [Pengenalan Namespace](src/namespace)
   - [Biasa](src/namespace/basic)
 - [Pengenalan Parameter Fungsi Utama](src/main)
