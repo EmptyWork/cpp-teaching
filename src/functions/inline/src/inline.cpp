@@ -1,5 +1,5 @@
-#ifdef _WIN32
-#include <Windows.h>
+#if defined (__WIN32__)
+#include <windows.h>
 #else
 #include <unistd.h>
 #endif
@@ -51,7 +51,11 @@ int main() {
   
   std::cout << "\x1B[40;34mINFO:\t\033[0m Program ini akan tidur selama 10 detik\n" 
             << "\t Sebelum melanjutkan prosesnya\n\n";
+  #if defined (__WIN32__)
+  Sleep(10000);
+  #else
   sleep(10);
+  #endif
   for (int i = 0; i < 100; i++) add(i);
 
 }
