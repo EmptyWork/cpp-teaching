@@ -21,18 +21,22 @@ RM=rm $(RMFLAGS)
 
 SRC=src
 BUILD=build
-MAINDIR=$(SRC)/main
+ARGDIR=$(SRC)/args
 FUNCDIR=$(SRC)/functions
 DTDIR=$(SRC)/data-types
+NMSPCDIR=$(SRC)/namespace
+
+EXE=
 
 # =====
 # daftar aplikasi dan name `make` 
 # =====
 
 EPS=ep_inparr ep_cashier
-FUNCS=func_void func_basic func_inline
-DTS=dt_native dt_native dt_enum dt_class
-MAINS=argc argv envp
+FUNCS=fbasic void inline auto
+DTS=dbasic array1d enum class struct
+ARGS=argc argv envp
+NMSPCS=nbasic
 
 # =====
 # koleksi aplikasi
@@ -41,48 +45,57 @@ MAINS=argc argv envp
 EP=ep
 FUNC=func
 DT=dt
-MA=ma
+AR=ar
+NMS=nms
 
-all: $(DT) $(FUNC) $(EP) $(MA)
+all: $(DT) $(FUNC) $(EP) $(AR)
 
-$(MA): $(MAINS)
+$(AR): $(ARGS)
 
-argc: $(BUILD) $(MAINDIR)/argc/src/argc.cpp
-	$(CPP) $(CPPFLAGS) $(MAINDIR)/argc/src/argc.cpp -o $(BUILD)/argc
+argc: $(BUILD) $(ARGDIR)/argc/src/argc.cpp
+	$(CPP) $(CPPFLAGS) $(ARGDIR)/argc/src/argc.cpp -o $(BUILD)/argc${EXE}
 
-argv: $(BUILD) $(MAINDIR)/argv/src/argv.cpp
-	$(CPP) $(CPPFLAGS) $(MAINDIR)/argv/src/argv.cpp -o $(BUILD)/argv
+argv: $(BUILD) $(ARGDIR)/argv/src/argv.cpp
+	$(CPP) $(CPPFLAGS) $(ARGDIR)/argv/src/argv.cpp -o $(BUILD)/argv${EXE}
 
-envp: $(BUILD) $(MAINDIR)/envp/src/envp.cpp
-	$(CPP) $(CPPFLAGS) $(MAINDIR)/envp/src/envp.cpp -o $(BUILD)/envp
+envp: $(BUILD) $(ARGDIR)/envp/src/envp.cpp
+	$(CPP) $(CPPFLAGS) $(ARGDIR)/envp/src/envp.cpp -o $(BUILD)/envp${EXE}
 
 $(FUNC): $(FUNCS)
 
-func_void:
-	$(CD) $(FUNCDIR)/void && make 
+fbasic: $(BUILD) $(FUNCDIR)/basic/src/basic.cpp
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/basic/src/basic.cpp -o $(BUILD)/$@${EXE}
 
-func_basic: $(BUILD) $(FUNCDIR)/basic/src/func_basic.cpp
-	$(CPP) $(CPPFLAGS) $(FUNCDIR)/basic/src/$@.cpp -o $(BUILD)/$@
+void: $(BUILD) $(FUNCDIR)/void/src/void.cpp
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/void/src/void.cpp -o $(BUILD)/$@${EXE}
 
-func_inline: $(BUILD) $(FUNCDIR)/inline/src/func_inline.cpp
-	$(CPP) $(CPPFLAGS) $(FUNCDIR)/inline/src/$@.cpp -o $(BUILD)/$@
+inline: $(BUILD) $(FUNCDIR)/inline/src/inline.cpp
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/inline/src/inline.cpp -o $(BUILD)/$@${EXE}
+
+auto: $(BUILD) $(FUNCDIR)/auto/src/auto.cpp
+	$(CPP) $(CPPFLAGS) $(FUNCDIR)/auto/src/auto.cpp -o $(BUILD)/$@${EXE}
 
 $(DT): $(DTS)
 
-dt_native:
-	$(CD) $(DTDIR)/native && make 
+dbasic: $(BUILD) $(DTDIR)/basic/src/basic.cpp
+	$(CPP) $(CPPFLAGS) $(DTDIR)/basic/src/basic.cpp -o $(BUILD)/$@${EXE}
 
-dt_struct: $(BUILD) $(DTDIR)/struct/src/struct.cpp
-	$(CPP) $(CPPFLAGS) $(DTDIR)/struct/src/struct.cpp -o $(BUILD)/$@
+struct: $(BUILD) $(DTDIR)/struct/src/struct.cpp
+	$(CPP) $(CPPFLAGS) $(DTDIR)/struct/src/struct.cpp -o $(BUILD)/$@${EXE}
 
-dt_enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
-	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/enum.cpp -o $(BUILD)/$@
+enum: $(BUILD) $(DTDIR)/enum/src/enum.cpp
+	$(CPP) $(CPPFLAGS) $(DTDIR)/enum/src/enum.cpp -o $(BUILD)/$@${EXE}
 
-dt_class: $(BUILD) $(DTDIR)/class/src/class.cpp
-	$(CD) $(DTDIR)/class/ && make 
+class: $(BUILD) $(DTDIR)/class/src/class.cpp
+	$(CPP) $(CPPFLAGS) $(DTDIR)/class/src/class.cpp -o $(BUILD)/$@${EXE}
 
-dt_array: $(BUILD) $(DTDIR)/array/src/array.cpp
-	$(CD) $(DTDIR)/array/ && make && ./build/main
+array1d: $(BUILD) $(DTDIR)/array/array1d/src/array1d.cpp
+	$(CPP) $(CPPFLAGS) $(DTDIR)/array/array1d/src/array1d.cpp -o $(BUILD)/$@${EXE}
+
+$(NMS): $(NMSPCS)
+
+nbasic: $(BUILD) $(NMSPCDIR)/basic/src/basic.cpp
+	$(CPP) $(CPPFLAGS) $(NMSPCDIR)/basic/src/basic.cpp -o $(BUILD)/$@${EXE}
 
 $(EP): $(EPS)
 
