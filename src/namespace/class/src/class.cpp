@@ -13,7 +13,7 @@ namespace Bentuk {
 
     public:
       Lingkaran(int _diameter) {
-        std::cout << "(obj) Lingkaran dibuat" << std::endl;
+        std::cout << "(obj) Lingkaran dibuat dengan diameter: " << _diameter << std::endl;
         diameter = _diameter;
         phi = 3.14;
       }
@@ -32,9 +32,9 @@ namespace {
 
   class Manusia {
     private:
-      std::string name;
+      std::string nama;
       int age;
-      char gender;
+      const char *jeniskelamin;
       Status status;
 
       std::string meninggal = "alm. ";
@@ -45,28 +45,36 @@ namespace {
         status = _status;
       }
 
-      void aturnama(std::string _name){
-        (status == MENINGGAL) ? name = meninggal + _name : name = _name;
+      void aturnama(std::string _nama){
+        if (status == MENINGGAL) 
+          nama = meninggal + _nama;
+        else
+          nama = _nama;
       }
 
       void aturumur(int _age) {
         age = _age;
       }
 
-      void aturjeniskelamin(char _gender) {
-        gender = _gender;
+      void aturjeniskelamin(char _jeniskelamin) {
+        if(_jeniskelamin == 'P') 
+          jeniskelamin = "Pria";
+        else if(_jeniskelamin == 'W') 
+          jeniskelamin = "Wanita";
+        else 
+          jeniskelamin = "tidak diatur, silahkan gunakan aturjeniskelamin(string)";
       }
 
       std::string ambilnama() {
-        return name;
+        return nama;
       }
 
       int ambilumur() {
         return age;
       }
 
-      char ambiljeniskelamin() {
-        return gender;
+      const char* ambiljeniskelamin() {
+        return jeniskelamin;
       }
 
       ~Manusia() {
@@ -81,7 +89,6 @@ int main() {
   cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << endl;
   
   ::Manusia jason(MENINGGAL);
-
  
   jason.aturnama("Jason Aldo Amluina");
   jason.aturumur(23);
