@@ -1,3 +1,4 @@
+```cpp
 #include <iostream>
 
 enum Status {
@@ -81,7 +82,6 @@ int main() {
   cout << "CPP Teaching Copyright (C) 2022  EmptyWork" << endl;
   
   ::Manusia jason(MENINGGAL);
-
  
   jason.aturnama("Jason Aldo Amluina");
   jason.aturumur(23);
@@ -94,3 +94,4 @@ int main() {
   Bentuk::Lingkaran bangunpertama(2);
   cout << "Luas lingkaran yaitu: " << bangunpertama.luas() << endl;
 }
+```
